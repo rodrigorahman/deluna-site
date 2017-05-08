@@ -7,5 +7,55 @@
 </ion-header>
 
 <ion-content padding>
-  Home
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" placeholder="Digite o produto ou endereço: ( Sapato em Santo André )"
+                   clearInput></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button full>
+          Encontrar a melhor oferta
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item-divider style="background-color:#ffffff; border-bottom: 1px solid #757575"></ion-item-divider>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="pricetags" icon-left></ion-icon>
+      As melhores ofertas encontradas:
+    </ion-list-header>
+
+    <ion-item (click)="viewItem('Mega Promoção Sapato Via Marte','Venha para Via Marte hoje e compre este lindo sapato de 599.00 por 199.00 ! Corra, é só hoje!!!', 'sapato.png')">
+      <ion-avatar item-left>
+        <img src="assets/sapato.png">
+      </ion-avatar>
+      <h3>Mega Promoção Sapato Via Marte</h3>
+      <p>Venha para Via Marte hoje e compre este</p>
+      <p>lindo sapato de 599.00 por 199.00 !</p>
+      <p>Corra, é só hoje!!!</p>
+    </ion-item>
+    <ion-item (click)="viewItem('Só hoje qualquer blusa R$ 49,99','Venha a loja hoje e adiquira qualquer blusa por R$ 49,99', 'blusa-cetim-azul.jpg')">
+      <ion-avatar item-left>
+        <img src="assets/blusa-cetim-azul.jpg">
+      </ion-avatar>
+      <h3>Só hoje qualquer blusa R$ 49,99</h3>
+      <p>Venha a loja hoje e adiquira qualquer </p>
+      <p>blusa por R$ 49,99</p>
+    </ion-item>
+    <ion-item (click)="viewItem('Temaki por R$ 5,99','Venha jantar e compre seu temaki por apenas R$ 5,99', 'Temaki.jpg')">
+      <ion-avatar item-left>
+        <img src="assets/Temaki.jpg">
+      </ion-avatar>
+      <h3>Temaki por R$ 5,99</h3>
+      <p>Venha jantar e compre seu temaki por apenas R$ 5,99</p>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

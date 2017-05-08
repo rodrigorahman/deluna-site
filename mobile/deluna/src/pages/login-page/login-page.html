@@ -9,8 +9,8 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-12>
-        <img src="/assets/deluna_logo.PNG"/>
+      <ion-col col-12 text-center>
+        <img src="assets/deluna_logo.PNG" height="150"/>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -23,16 +23,16 @@
           <ion-card-content>
             <ion-list>
               <ion-item>
-                <ion-label>E-Mail</ion-label>
-                <ion-input type="text" value=""></ion-input>
+                <ion-label color="secondary" floating>E-Mail</ion-label>
+                <ion-input type="text" value="" ></ion-input>
               </ion-item>
               <ion-item>
-                <ion-label>Senha</ion-label>
+                <ion-label color="secondary" floating>Senha</ion-label>
                 <ion-input type="text" value=""></ion-input>
               </ion-item>
             </ion-list>
             <div padding>
-              <button ion-button full>
+              <button ion-button full (click)="gotToHome()">
                 Entrar
               </button>
             </div>
